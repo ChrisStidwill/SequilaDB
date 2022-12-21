@@ -1,6 +1,9 @@
 package UIElements.primal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "actor")
@@ -27,6 +30,18 @@ public class Actor {
     public String getLastname() {
         return lastname;
     }
+
+    @ManyToMany //(targetEntity = Actor.class)
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = @JoinColumn(name="actor_id", referencedColumnName = "actor_id"),
+            inverseJoinColumns = @JoinColumn(name="film_id", referencedColumnName = "film_id")
+    )
+
+    @JsonIgnore
+    private List<Film> films;
+
+    public List<Film> getFilms(){return films;}
 
     public void setActorid(int actorid) {
         this.actorid = actorid;

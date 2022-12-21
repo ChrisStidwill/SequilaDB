@@ -68,6 +68,13 @@ public class PrimalApplication {
 		return film.getActors();
 	}
 
+	@GetMapping("/getFilmsFromActor/{actor_id}")
+	public @ResponseBody Iterable<Film> getFilmsByActorID(@PathVariable("actor_id") int actorID) {
+		Actor actor = actorRepository.findById(actorID).orElseThrow(() -> new ResourceAccessException(
+				"in PrimalApplication.java, getFilmsByActorID returned something other than Actor"));
+		return actor.getFilms();
+	}
+
 	@PostMapping("/allActors")
 	public Actor newActor(@RequestBody Actor newActor) {
 		return actorRepository.save(newActor);
