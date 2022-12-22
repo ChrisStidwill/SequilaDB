@@ -8,5 +8,4 @@ Feature: get a specific actor
       | actorID | firstname | lastname |
       | 1       | PENELOPE | GUINESS |
       | 5       | JOHNNY   | LOLLOBRIGIDA|
-      | 10      | BABA     | ISYOU       |
 
