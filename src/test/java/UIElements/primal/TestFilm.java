@@ -1,5 +1,6 @@
 package UIElements.primal;
 import UIElements.primal.Film;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,7 @@ public class TestFilm {
         Assertions.assertEquals("StarWar", myTestFilm.getTitle(), "StarWar");
         Assertions.assertEquals("War in the star", myTestFilm.getDescription(), "War in the star");
         Assertions.assertNotEquals(49, myTestFilm.getDuration());
+        Assertions.assertEquals(myTestFilm.getClass(),Film.class);
     }
 
     @Test public void testSetters(){

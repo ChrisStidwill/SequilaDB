@@ -24,5 +24,6 @@ public class TestActor {
         Assertions.assertNotEquals(3,myTestActor.getActorid());
         Assertions.assertNotEquals("Agor", myTestActor.getFirstname());
         Assertions.assertEquals(myTestActor.getFilms(),null);
+        Assertions.assertEquals(myTestActor.getClass(), Actor.class);
     }
 }
