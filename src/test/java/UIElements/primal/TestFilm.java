@@ -11,4 +11,16 @@ public class TestFilm {
         Assertions.assertEquals("War in the star", myTestFilm.getDescription(), "War in the star");
         Assertions.assertNotEquals(49, myTestFilm.getDuration());
     }
+
+    @Test public void testSetters(){
+        Film newTestFilm = new Film();
+        newTestFilm.setTitle("StarWar2");
+        newTestFilm.setDescription("Another starwar film");
+        newTestFilm.setDuration(11);
+        newTestFilm.setFilmid(5);
+        Assertions.assertEquals("StarWar2", newTestFilm.getTitle());
+        Assertions.assertEquals("Another starwar film", newTestFilm.getDescription());
+        Assertions.assertEquals(11, newTestFilm.getDuration());
+        Assertions.assertEquals(5, newTestFilm.getFilmid());
+    }
 }
