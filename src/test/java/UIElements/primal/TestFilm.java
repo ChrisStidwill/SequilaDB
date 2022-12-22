@@ -8,7 +8,8 @@ public class TestFilm {
     @Test
     public void testConstructor(){
         Film myTestFilm = new Film("StarWar", "War in the star", 50);
-        Assertions.assertEquals("StarWar", myTestFilm.getTitle(), "StarWar");
+        myTestFilm.setTitle("WarStar");
+        Assertions.assertEquals("WarStar", myTestFilm.getTitle(), "StarWar");
         Assertions.assertEquals("War in the star", myTestFilm.getDescription(), "War in the star");
         Assertions.assertNotEquals(49, myTestFilm.getDuration());
         Assertions.assertEquals(myTestFilm.getClass(),Film.class);
