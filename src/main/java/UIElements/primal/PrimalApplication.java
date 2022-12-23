@@ -11,12 +11,6 @@ import org.springframework.web.client.ResourceAccessException;
 // mvn spring-boot:run
 // http://localhost:8080/home/getActor/199
 // http://localhost:8080/home/allActors
-// To self study postman: https://www.guru99.com/postman-tutorial.html
-// Do what we did with actors with the other classes in the database
-// Do joins in SQL
-// you should have functionality that accesses intermediate tables (e.g. a method that returns all the actors in a given film)
-// https://en.wikibooks.org/wiki/Java_Persistence/ManyToMany#Mapping_a_Join_Table_with_Additional_Columns (for joins)
-// Cucumber tests - have at least one but try several.
 
 @SpringBootApplication
 @RestController
